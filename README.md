@@ -27,6 +27,11 @@ https://github.com/dooboolab/react-native-drop-down-item
 ## Getting started
 `$ npm install react-native-drop-down-item --save`
 
+* Import
+  ```javascript
+  import DropDownItem from 'react-native-drop-down-item';
+  ```
+
 * Data
   ```javascript
   state = {
