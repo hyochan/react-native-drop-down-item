@@ -1,4 +1,4 @@
-# react-native-switch-toggle
+# react-native-drop-down-item
 <p align="left">
   <a href="https://npmjs.org/package/react-native-drop-down-item"><img alt="npm version" src="http://img.shields.io/npm/v/react-native-drop-down-item.svg?style=flat-square"></a>
   <a href="https://npmjs.org/package/react-native-drop-down-item"><img alt="npm version" src="http://img.shields.io/npm/dm/react-native-drop-down-item.svg?style=flat-square"></a>
