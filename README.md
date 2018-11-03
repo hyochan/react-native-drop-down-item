@@ -27,43 +27,64 @@ https://github.com/dooboolab/react-native-drop-down-item
 ## Getting started
 `$ npm install react-native-drop-down-item --save`
 
-```javascript
-<View style={styles.container}>
-  <ScrollView style={{ alignSelf: 'stretch' }}>
-    {
-      this.state.contents
-        ? this.state.contents.map((param, i) => {
-          return (
-            <DropDownItem
-              key={i}
-              style={styles.dropDownItem}
-              contentVisible={false}
-              invisibleImage={IC_ARR_DOWN}
-              visibleImage={IC_ARR_UP}
-              header={
-                <View>
-                  <Text style={{
-                    fontSize: 16,
-                    color: 'blue',
-                  }}>{param.title}</Text>
-                </View>
-              }
-            >
-              <Text style={[
-                styles.txt,
-                {
-                  fontSize: 20,
+* Data
+  ```javascript
+  state = {
+    contents: [
+      {
+        title: 'Title 1',
+        body: 'Hi. I love this component. What do you think?',
+      },
+      {
+        title: 'See this one too',
+        body: 'Yes. You can have more items.',
+      },
+      {
+        title: 'Thrid thing',
+        body: 'What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text?',
+      },
+    ],
+  };
+  ```
+
+* Usage
+  ```javascript
+  <View style={styles.container}>
+    <ScrollView style={{ alignSelf: 'stretch' }}>
+      {
+        this.state.contents
+          ? this.state.contents.map((param, i) => {
+            return (
+              <DropDownItem
+                key={i}
+                style={styles.dropDownItem}
+                contentVisible={false}
+                invisibleImage={IC_ARR_DOWN}
+                visibleImage={IC_ARR_UP}
+                header={
+                  <View>
+                    <Text style={{
+                      fontSize: 16,
+                      color: 'blue',
+                    }}>{param.title}</Text>
+                  </View>
                 }
-              ]}>
-                {param.body}
-              </Text>
-            </DropDownItem>
-          );
-        })
-        : null
-    }
-    <View style={{ height: 96 }}/>
-  </ScrollView>
-</View>
-});
-```
+              >
+                <Text style={[
+                  styles.txt,
+                  {
+                    fontSize: 20,
+                  }
+                ]}>
+                  {param.body}
+                </Text>
+              </DropDownItem>
+            );
+          })
+          : null
+      }
+      <View style={{ height: 96 }}/>
+    </ScrollView>
+  </View>
+  });
+  ```
