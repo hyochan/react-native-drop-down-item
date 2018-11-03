@@ -20,20 +20,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     overflow: 'hidden',
   },
-  header: {
-    width: '100%',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  headerTxt: {
-    fontSize: 12,
-    color: 'rgb(74,74,74)',
-    marginRight: 60,
-    flexWrap: 'wrap',
-  },
   icons: {
     width: 20,
     height: 20,
@@ -79,7 +65,6 @@ class Item extends Component {
   static animated;
   static defaultProps = {
     contentVisible: false,
-    headerTxt: '',
     backgroundColor: 'transparent',
     titleBackground: 'transparent',
     contentBackground: 'transparent',
@@ -90,7 +75,6 @@ class Item extends Component {
 
   static propTypes = {
     contentVisible: PropTypes.bool,
-    header: PropTypes.any,
     backgroundColor: PropTypes.string,
     titleBackground: PropTypes.string,
     contentBackground: PropTypes.string,
@@ -124,7 +108,6 @@ class Item extends Component {
           onPress={this.onPress}
         >
           <View
-            style={ styles.header }
             onLayout={ this.onAnimLayout }
           >
             { this.props.header }
@@ -133,7 +116,6 @@ class Item extends Component {
                 ? this.props.visibleImage
                 : this.props.invisibleImage
             } style={styles.icons}/>
-            {this.props.header}
           </View>
         </TouchableOpacity>
         <View

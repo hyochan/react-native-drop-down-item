@@ -6,12 +6,6 @@
 Simple drop down item component for react-native. This component supports drop down toggle with animation.<br/>
 <img src="https://user-images.githubusercontent.com/27461460/47951961-a7a7e500-dfab-11e8-9189-86c0eddb6e12.gif"/>
 
-## Changelogs
-- **[1.0.2]**
-  + Support readme.
-- **[1.0.0]**
-  + First time publish.
-
 ## Npm repo
 https://www.npmjs.com/package/react-native-drop-down-item
 
