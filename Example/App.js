@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import DropDownItem from 'react-native-drop-down-item';
 
 const IC_ARR_DOWN = require('./icons/ic_arr_down.png');
@@ -59,7 +59,7 @@ export default class App extends Component<Props> {
                       styles.txt,
                       {
                         fontSize: 20,
-                      }
+                      },
                     ]}>
                       {param.body}
                     </Text>

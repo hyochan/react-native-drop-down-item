@@ -1,8 +1,9 @@
 # react-native-drop-down-item
-<p align="left">
-  <a href="https://npmjs.org/package/react-native-drop-down-item"><img alt="npm version" src="http://img.shields.io/npm/v/react-native-drop-down-item.svg?style=flat-square"></a>
-  <a href="https://npmjs.org/package/react-native-drop-down-item"><img alt="npm version" src="http://img.shields.io/npm/dm/react-native-drop-down-item.svg?style=flat-square"></a>
-</p>
+[![Npm Version](http://img.shields.io/npm/v/react-native-drop-down-item.svg?style=flat-square)](https://npmjs.org/package/react-native-drop-down-item)
+[![Downloads](http://img.shields.io/npm/dm/react-native-drop-down-item.svg?style=flat-square)](https://npmjs.org/package/react-native-drop-down-item)
+[![Build Status](https://travis-ci.com/dooboolab/react-native-drop-down-item.svg?branch=master)](https://travis-ci.com/dooboolab/react-native-drop-down-item)
+![License](http://img.shields.io/npm/l/react-native-drop-down-item.svg?style=flat-square)
+
 Simple drop down item component for react-native. This component supports drop down toggle with animation.<br/>
 <img src="https://user-images.githubusercontent.com/27461460/47951961-a7a7e500-dfab-11e8-9189-86c0eddb6e12.gif"/>
 
