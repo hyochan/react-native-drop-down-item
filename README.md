@@ -1,7 +1,7 @@
 # react-native-drop-down-item
 [![Npm Version](http://img.shields.io/npm/v/react-native-drop-down-item.svg?style=flat-square)](https://npmjs.org/package/react-native-drop-down-item)
 [![Downloads](http://img.shields.io/npm/dm/react-native-drop-down-item.svg?style=flat-square)](https://npmjs.org/package/react-native-drop-down-item)
-[![Build Status](https://travis-ci.com/dooboolab/react-native-drop-down-item.svg?branch=master)](https://travis-ci.com/dooboolab/react-native-drop-down-item)
+[![Build Status](https://travis-ci.com/dooboolab/react-native-drop-down-item.svg?branch=master)](https://travis-ci.com/dooboolab/react-native-drop-down-item) [![Greenkeeper badge](https://badges.greenkeeper.io/dooboolab/react-native-drop-down-item.svg)](https://greenkeeper.io/)
 ![License](http://img.shields.io/npm/l/react-native-drop-down-item.svg?style=flat-square)
 
 Simple drop down item component for react-native. This component supports drop down toggle with animation.<br/>
