@@ -155,19 +155,19 @@ class Item extends Component {
 
   onAnimLayout = (evt) => {
     const headerHeight = evt.nativeEvent.layout.height;
-      if (!this.state.isMounted && !this.props.contentVisible) {
-        this.animated = new Animated.Value(headerHeight),
-        this.setState({
-          isMounted: true,
-          headerHeight,
-        });
-        return;
-      } else if (!this.state.isMounted) {
-        InteractionManager.runAfterInteractions(() => {
-          this.animated = new Animated.Value(headerHeight + this.state.contentHeight);
-        });
-      }
-      this.setState({ headerHeight, isMounted: true });
+    if (!this.state.isMounted && !this.props.contentVisible) {
+      this.animated = new Animated.Value(headerHeight);
+      this.setState({
+        isMounted: true,
+        headerHeight,
+      });
+      return;
+    } else if (!this.state.isMounted) {
+      InteractionManager.runAfterInteractions(() => {
+        this.animated = new Animated.Value(headerHeight + this.state.contentHeight);
+      });
+    }
+    this.setState({ headerHeight, isMounted: true });
   }
 
   onLayout = (evt) => {
