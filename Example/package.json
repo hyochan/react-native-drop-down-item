@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "react": "16.8.5",
-    "react-native": "0.59.5",
+    "react-native": "0.59.7",
     "react-native-drop-down-item": "^1.0.5"
   },
   "devDependencies": {
