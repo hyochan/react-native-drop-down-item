@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.8.5",
+    "react": "16.9.0",
     "react-native": "0.59.10",
     "react-native-drop-down-item": "^1.0.5"
   },
