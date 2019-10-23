@@ -137,7 +137,7 @@ class Item extends Component {
   }
 
   runAnimation = () => {
-    const { contentVisible, headerHeight, contentHeight, headerHeight } = this.state;
+    const { contentVisible, headerHeight, contentHeight } = this.state;
     const initialValue = contentVisible
       ? headerHeight + contentHeight : headerHeight;
     const finalValue = contentVisible
