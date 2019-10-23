@@ -94,14 +94,16 @@ class Item extends Component {
   }
 
   render() {
+    const { backgroundColor, style, header, visibleImage, invisibleImage, children } = this.props;
+    const { contentVisible } = this.state;
     return (
       <Animated.View style={[
         styles.container,
         {
           height: this.animated,
-          backgroundColor: this.props.backgroundColor,
+          backgroundColor: backgroundColor,
         },
-        this.props.style,
+        style,
       ]}>
         <TouchableOpacity
           activeOpacity={0.5}
@@ -110,11 +112,11 @@ class Item extends Component {
           <View
             onLayout={ this.onAnimLayout }
           >
-            { this.props.header }
+            { header }
             <Image source={
-              this.state.contentVisible
-                ? this.props.visibleImage
-                : this.props.invisibleImage
+              contentVisible
+                ? visibleImage
+                : invisibleImage
             } style={styles.icons}/>
           </View>
         </TouchableOpacity>
@@ -127,7 +129,7 @@ class Item extends Component {
               styles.contentChild,
             ]}
           >
-            { this.props.children }
+            { children }
           </View>
         </View>
       </Animated.View>
@@ -135,13 +137,14 @@ class Item extends Component {
   }
 
   runAnimation = () => {
-    const initialValue = this.state.contentVisible
-      ? this.state.headerHeight + this.state.contentHeight : this.state.headerHeight;
-    const finalValue = this.state.contentVisible
-      ? this.state.headerHeight : this.state.contentHeight + this.state.headerHeight;
+    const { contentVisible, headerHeight, contentHeight, headerHeight } = this.state;
+    const initialValue = contentVisible
+      ? headerHeight + contentHeight : headerHeight;
+    const finalValue = contentVisible
+      ? headerHeight : contentHeight + headerHeight;
 
     this.setState({
-      contentVisible: !this.state.contentVisible,
+      contentVisible: !contentVisible,
     });
 
     this.animated.setValue(initialValue);
@@ -154,17 +157,19 @@ class Item extends Component {
   }
 
   onAnimLayout = (evt) => {
+    const { isMounted, contentHeight } = this.state;
+    const { contentVisible } = this.props;
     const headerHeight = evt.nativeEvent.layout.height;
-    if (!this.state.isMounted && !this.props.contentVisible) {
+    if (!isMounted && !contentVisible) {
       this.animated = new Animated.Value(headerHeight);
       this.setState({
         isMounted: true,
         headerHeight,
       });
       return;
-    } else if (!this.state.isMounted) {
+    } else if (!isMounted) {
       InteractionManager.runAfterInteractions(() => {
-        this.animated = new Animated.Value(headerHeight + this.state.contentHeight);
+        this.animated = new Animated.Value(headerHeight + contentHeight);
       });
     }
     this.setState({ headerHeight, isMounted: true });
