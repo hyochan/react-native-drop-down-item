@@ -71,6 +71,7 @@ class Item extends Component {
     underlineColor: '#d3d3d3',
     visibleImage: false,
     invisibleImage: false,
+    onPressHeader: () => {}
   };
 
   static propTypes = {
@@ -81,6 +82,7 @@ class Item extends Component {
     underlineColor: PropTypes.string,
     visibleImage: PropTypes.any,
     invisibleImage: PropTypes.any,
+    onPressHeader: PropTypes.func
   };
 
   constructor(props) {
@@ -181,7 +183,9 @@ class Item extends Component {
   }
 
   onPress = () => {
+    const { onPressHeader } = this.props;
     this.runAnimation();
+    onPressHeader();
   }
 }
 
