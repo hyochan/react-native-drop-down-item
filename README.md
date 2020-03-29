@@ -30,6 +30,7 @@ https://github.com/dooboolab/react-native-drop-down-item
 | underlineColor    |           | string  | `transparent` |
 | visibleImage      |           | any     | `undefined`   |
 | invisibleImage    |           | any     | `undefined`   |
+| onPressHeader     |           | func    | `() => {}`    |
 
 ## Getting started
 
@@ -77,6 +78,7 @@ https://github.com/dooboolab/react-native-drop-down-item
                 contentVisible={false}
                 invisibleImage={IC_ARR_DOWN}
                 visibleImage={IC_ARR_UP}
+                onPressHeader={() => console.log('Your callback')}
                 header={
                   <View>
                     <Text style={{
